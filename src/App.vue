@@ -1,16 +1,28 @@
 <template>
   <v-app>
-
-      <h1 style="text-align: center; margin-top: 10px">
-        Salut
-      </h1>
-
-
-    <v-btn
-        elevation="2"
-        style="color: blue; width: 210px; background: grey; margin-left: auto; margin-right: auto"
-    >Appuyez moi dessus svp</v-btn>
-
+    <header>
+      <nav>
+        <ul>
+          <li>
+            COMPÉTENCES
+          </li>
+          <li>
+            FORMATIONS
+          </li>
+          <li>
+            CURRICULUM VITÆ
+          </li>
+          <li>
+            RÉALISATIONS
+          </li>
+          <li>
+            <a href="">
+              CONTACT
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   </v-app>
 </template>
 
@@ -20,10 +32,34 @@
 export default {
   name: 'App',
 
-
-
   data: () => ({
     //
   }),
 };
 </script>
+
+<style>
+
+header {
+  width: 100%;
+  height: 150px;
+  background-color: grey;
+  box-shadow: 0px 5px 10px black;
+}
+
+nav {
+  padding: 0;
+  text-align: center;
+  margin: 50px 0 0;
+}
+nav li {
+  display: inline;
+  list-style: none;
+  font-size:25px;
+  padding: 30px;
+}
+nav a {
+  display:inline-block;
+  margin: 0 30px;
+}
+</style>
