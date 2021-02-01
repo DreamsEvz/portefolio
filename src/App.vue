@@ -1,38 +1,39 @@
 <template>
   <v-app>
-    <header>
+
       <nav>
         <ul>
-          <li>
-            <v-btn href="" style="font-size: 20px; background-color: green">
-              COMPETENCES
-            </v-btn>
+          <li id="nom">
+            MARCEL Evan
           </li>
           <li>
-            <v-btn  href="" style="font-size: 20px; background-color: green">
+              <a id="a">
+                COMPÉTENCES
+              </a>
+          </li>
+          <li>
+            <a id="a">
               FORMATIONS
-            </v-btn>
+            </a>
           </li>
           <li>
-            <v-btn  href="" style="font-size: 20px; background-color: green">
+            <a id="a">
               CURRICULUM VITÆ
-            </v-btn>
+            </a>
           </li>
           <li>
-            <v-btn  href="" style="font-size: 20px; background-color: green">
+            <a id="a">
               RÉALISATIONS
-            </v-btn>
+            </a>
           </li>
           <li>
-            <v-btn href="" style="font-size: 20px; background-color: green">
-              CONTACT
-            </v-btn>
+           <a id="a">
+             CONTACT
+           </a>
           </li>
         </ul>
       </nav>
-
-
-    </header>
+    <v-divider style="margin-top: 50px"></v-divider>
   </v-app>
 </template>
 
@@ -60,20 +61,36 @@ header {
 nav {
   padding: 0;
   text-align: center;
-  margin: 50px 0 0;
+  margin: 30px 0 0;
 }
 nav li {
   display: inline;
   list-style: none;
-  font-size:25px;
+  font-size:15px;
   padding: 30px;
 
 }
 
-nav v-btn:hover {
-  background-color: grey;
+#a {
+  color: black;
+  text-decoration: inherit;
+
+
+
+}
+
+#a:hover{
+  border-bottom: #DD9D8F solid 3px;
+  padding-bottom: 15px;
+  color: #DD9D8F;
 }
 
 
+
+#nom {
+  margin-right: 250px;
+  font-size: 50px;
+  color : #DD9D8F;
+}
 
 </style>
