@@ -4,24 +4,34 @@
       <nav>
         <ul>
           <li>
-            COMPÉTENCES
+            <v-btn href="" style="font-size: 20px; background-color: green">
+              COMPETENCES
+            </v-btn>
           </li>
           <li>
-            FORMATIONS
+            <v-btn  href="" style="font-size: 20px; background-color: green">
+              FORMATIONS
+            </v-btn>
           </li>
           <li>
-            CURRICULUM VITÆ
+            <v-btn  href="" style="font-size: 20px; background-color: green">
+              CURRICULUM VITÆ
+            </v-btn>
           </li>
           <li>
-            RÉALISATIONS
+            <v-btn  href="" style="font-size: 20px; background-color: green">
+              RÉALISATIONS
+            </v-btn>
           </li>
           <li>
-            <a href="">
+            <v-btn href="" style="font-size: 20px; background-color: green">
               CONTACT
-            </a>
+            </v-btn>
           </li>
         </ul>
       </nav>
+
+
     </header>
   </v-app>
 </template>
@@ -57,9 +67,13 @@ nav li {
   list-style: none;
   font-size:25px;
   padding: 30px;
+
 }
-nav a {
-  display:inline-block;
-  margin: 0 30px;
+
+nav v-btn:hover {
+  background-color: grey;
 }
+
+
+
 </style>
