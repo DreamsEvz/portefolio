@@ -3,8 +3,11 @@
 
       <nav>
         <ul>
-          <li id="nom">
-            MARCEL Evan
+          <li>
+            <span>
+              MARCEL EVAN
+            </span>
+
           </li>
           <li>
               <a id="a">
@@ -34,6 +37,23 @@
         </ul>
       </nav>
     <v-divider style="margin-top: 50px"></v-divider>
+
+
+    <v-card class="mx-auto" width="80%" height="500px" style="min-height: 84%">
+      <v-card-title class="justify-center" style="color: #DD9D8F; font-size: 25px; margin-top: 3px;">
+        Présentation personnelle
+      </v-card-title>
+        <v-card-text style="font-size: 15px">
+          Jeune étudiant de 19 ans
+        </v-card-text>
+      
+
+      <!-- <v-divider vertical width="70%" style="margin-right: auto; margin-left: auto; margin-top: 250px; "  ></v-divider> -->
+      <v-img >
+
+      </v-img>
+
+    </v-card>
   </v-app>
 </template>
 
@@ -71,6 +91,7 @@ nav li {
 
 }
 
+
 #a {
   color: black;
   text-decoration: inherit;
@@ -83,14 +104,14 @@ nav li {
   border-bottom: #DD9D8F solid 3px;
   padding-bottom: 15px;
   color: #DD9D8F;
+
 }
-
-
-
-#nom {
+nav li span {
   margin-right: 250px;
-  font-size: 50px;
+  font-size: 40px;
   color : #DD9D8F;
 }
+
+
 
 </style>
