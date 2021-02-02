@@ -39,7 +39,7 @@
     <v-divider style="margin-top: 50px"></v-divider>
 
 
-    <v-card class="mx-auto" width="80%" height="500px" style="min-height: 84%">
+    <v-card class="mx-auto" width="80%" height="100%" id="card-presentation" style="animation: 2s ease reverse">
       <v-card-title class="justify-center" style="color: #DD9D8F; font-size: 25px; margin-top: 3px;">
         Présentation personnelle
       </v-card-title>
@@ -64,19 +64,14 @@ export default {
   name: 'App',
 
   data: () => ({
-    //
+
   }),
+
+
 };
 </script>
 
 <style>
-
-header {
-  width: 100%;
-  height: 150px;
-  background-color: grey;
-  box-shadow: 0px 5px 10px black;
-}
 
 nav {
   padding: 0;
@@ -91,13 +86,13 @@ nav li {
 
 }
 
-
+/* Les id "a" correspondent à plusieurs élément car le code css ci-dessous ne fonctionne pas en appelant l'élément ou en utilisant une class */
 #a {
   color: black;
   text-decoration: inherit;
-
-
-
+  transition-property: padding-bottom;
+  transition-duration: 0.5s;
+  padding-bottom: 0px;
 }
 
 #a:hover{
@@ -105,12 +100,15 @@ nav li {
   padding-bottom: 15px;
   color: #DD9D8F;
 
+
 }
 nav li span {
   margin-right: 250px;
   font-size: 40px;
   color : #DD9D8F;
 }
+
+
 
 
 
