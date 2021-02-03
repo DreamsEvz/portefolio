@@ -3,7 +3,7 @@
 
       <nav>
         <ul>
-          <li>
+          <li class="nom-header">
             <span>
               MARCEL EVAN
             </span>
@@ -39,7 +39,7 @@
     <v-divider style="margin-top: 50px"></v-divider>
 
 
-    <v-card class="mx-auto" width="80%" height="100%" id="card-presentation" style="animation: 2s ease reverse">
+    <v-card class="mx-auto" width="80%" height="100%" id="card-presentation" style="animation-duration: 2s ; animation-name: tranlate-left-card-presentation">
       <v-card-title class="justify-center" style="color: #DD9D8F; font-size: 25px; margin-top: 3px;">
         Présentation personnelle
       </v-card-title>
@@ -106,9 +106,28 @@ nav li span {
   margin-right: 250px;
   font-size: 40px;
   color : #DD9D8F;
+  animation-duration: 2s;
+  animation-name:translate-left-nom;
 }
 
 
+@keyframes tranlate-left-card-presentation {
+  from {
+    width: 10%;
+  }
+  to {
+   width: 80%;
+  }
+}
+
+@keyframes translate-left-nom {
+  from {
+    margin-left: -1500px;
+  }
+  to {
+    margin-left: 0px;
+  }
+}
 
 
 
