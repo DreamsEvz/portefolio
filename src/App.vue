@@ -1,56 +1,81 @@
 <template>
   <v-app>
 
-      <nav>
-        <ul>
-          <li class="nom-header">
-            <span>
-              MARCEL EVAN
+
+      <!--Div page complète-->
+      <div class="contenaire">
+        <div class="blockHorizontal">
+
+        <!--Slide 1-->
+        <div class="slide one">
+          <header id="header1">
+            <nav>
+              <ul>
+                <li id="nom-header">
+            <span id="lettre-m">
+              M
+            </span>
+                  <span>
+              ARCEL
+            </span>
+                  <span id="lettre-e">
+              E
             </span>
 
-          </li>
-          <li>
-              <a id="a">
-                COMPÉTENCES
-              </a>
-          </li>
-          <li>
-            <a id="a">
-              FORMATIONS
-            </a>
-          </li>
-          <li>
-            <a id="a">
-              CURRICULUM VITÆ
-            </a>
-          </li>
-          <li>
-            <a id="a">
-              RÉALISATIONS
-            </a>
-          </li>
-          <li>
-           <a id="a">
-             CONTACT
-           </a>
-          </li>
-        </ul>
-      </nav>
-    <v-divider style="margin-top: 50px"></v-divider>
+                  <span>
+              VAN
+            </span>
 
+                </li>
+                <li>
+                  <a id="a">
+                    COMPÉTENCES
+                  </a>
+                </li>
+                <li>
+                  <a id="a">
+                    FORMATIONS
+                  </a>
+                </li>
+                <li>
+                  <a id="a">
+                    CURRICULUM VITÆ
+                  </a>
+                </li>
+                <li>
+                  <a id="a">
+                    RÉALISATIONS
+                  </a>
+                </li>
+                <li>
+                  <a id="a">
+                    CONTACT
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </header>
+        </div>
 
-    <v-card class="mx-auto" width="80%" height="100%" id="card-presentation" style="animation-duration: 3s ; animation-name: tranlate-left-card-presentation">
-      <div id="div-card-presentation-premier50">
-        <v-card-text style="font-size: 25px; text-align: center">
-          Jeune étudiant de 19 ans
-        </v-card-text>
+        <!--Slide 2-->
+        <div class="slide two">
+
+        </div>
+
+        <!--Slide 3-->
+        <v-div class="slide three" >
+        3
+        </v-div>
+
+        <!--Slide 4-->
+        <div class="slide four" tile>
+        4
+        </div>
+
+        </div>
+
       </div>
-      <div id="div-card-presentation-deuxieme50">
-        <img src="src/img/logo.jpg">
-      </div>
-      <!-- <v-divider vertical width="70%" style="margin-right: auto; margin-left: auto; margin-top: 250px; "  ></v-divider> -->
 
-    </v-card>
   </v-app>
 </template>
 
@@ -60,9 +85,7 @@
 export default {
   name: 'App',
 
-  data: () => ({
-
-  }),
+  data: () => ({}),
 
 
 };
@@ -70,75 +93,168 @@ export default {
 
 <style>
 
+.contenaire {
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-x: hidden;
+  -ms-overlow-style: none;
+  scrollbar-width: none;
+
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.blockHorizontal {
+  display: flex;
+  flex-direction: row;
+  width: 400vw;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+}
+
+
+.slide{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:100px
+}
+
+.one {
+  background: white;
+}
+
+.two{
+  background: aqua;
+}
+
+.three {
+  background: antiquewhite;
+}
+
+.four{
+  background: beige;
+}
+
+
+
+
+header {
+  background-color: black;
+  width: 100vw;
+  position: fixed;
+  top:0;
+
+
+}
+
 nav {
   padding: 0;
   text-align: center;
-  margin: 30px 0 0;
+
 }
+
 nav li {
   display: inline;
   list-style: none;
-  font-size:15px;
+  font-size: 15px;
   padding: 30px;
 
 }
 
 /* Les id "a" correspondent à plusieurs élément car le code css ci-dessous ne fonctionne pas en appelant l'élément ou en utilisant une class */
+
 #a {
-  color: black;
+  color: white;
   text-decoration: inherit;
   transition-property: padding-bottom;
   transition-duration: 0.5s;
   padding-bottom: 0px;
 }
 
-#a:hover{
-  border-bottom: #DD9D8F solid 3px;
+#a:hover {
+  border-bottom: white solid 3px;
   padding-bottom: 15px;
-  color: #DD9D8F;
+  color: white;
 
 
 }
-nav li span {
-  margin-right: 200px;
-  font-size: 40px;
-  color : #DD9D8F;
-  animation-duration: 3s;
-  animation-name:translate-left-nom;
+
+#div-home {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+
 }
 
+#div-home:hover {
+  animation-duration: 1s;
+  animation-name: transition-oppacite;
+  animation-fill-mode: forwards;
 
-@keyframes tranlate-left-card-presentation {
+}
+
+@keyframes transition-oppacite {
   from {
-    opacity: 0;
+    opacity: 1;
   }
   to {
-   opacity: 1;
+    opacity: 0;
   }
 }
+
+
+nav li span {
+
+  font-size: 40px;
+  color: white;
+  animation-duration: 3s;
+  animation-name: translate-left-nom;
+  animation-iteration-count: 1;
+  animation: forwards;
+}
+
 
 @keyframes translate-left-nom {
   from {
     opacity: 0;
   }
   to {
-    opacity:1;
+    opacity: 1;
   }
 }
 
-#div-card-presentation-premier50{
+#div-card-presentation-premier50 {
   width: 50%;
   height: 90%;
   margin: auto;
   float: left;
 }
-#div-card-presentation-deuxieme50{
+
+#div-card-presentation-deuxieme50 {
   width: 50%;
   height: 90%;
   margin: auto;
   float: left;
 
 }
+
+#nom-header {
+
+
+}
+
+
+.lettre {
+  margin-right: -10px;
+}
+
 
 
 </style>
