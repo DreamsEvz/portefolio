@@ -39,19 +39,16 @@
     <v-divider style="margin-top: 50px"></v-divider>
 
 
-    <v-card class="mx-auto" width="80%" height="100%" id="card-presentation" style="animation-duration: 2s ; animation-name: tranlate-left-card-presentation">
-      <v-card-title class="justify-center" style="color: #DD9D8F; font-size: 25px; margin-top: 3px;">
-        Présentation personnelle
-      </v-card-title>
-        <v-card-text style="font-size: 15px">
+    <v-card class="mx-auto" width="80%" height="100%" id="card-presentation" style="animation-duration: 3s ; animation-name: tranlate-left-card-presentation">
+      <div id="div-card-presentation-premier50">
+        <v-card-text style="font-size: 25px; text-align: center">
           Jeune étudiant de 19 ans
         </v-card-text>
-      
-
+      </div>
+      <div id="div-card-presentation-deuxieme50">
+        <img src="src/img/logo.jpg">
+      </div>
       <!-- <v-divider vertical width="70%" style="margin-right: auto; margin-left: auto; margin-top: 250px; "  ></v-divider> -->
-      <v-img >
-
-      </v-img>
 
     </v-card>
   </v-app>
@@ -103,32 +100,45 @@ nav li {
 
 }
 nav li span {
-  margin-right: 250px;
+  margin-right: 200px;
   font-size: 40px;
   color : #DD9D8F;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-name:translate-left-nom;
 }
 
 
 @keyframes tranlate-left-card-presentation {
   from {
-    width: 10%;
+    opacity: 0;
   }
   to {
-   width: 80%;
+   opacity: 1;
   }
 }
 
 @keyframes translate-left-nom {
   from {
-    margin-left: -1500px;
+    opacity: 0;
   }
   to {
-    margin-left: 0px;
+    opacity:1;
   }
 }
 
+#div-card-presentation-premier50{
+  width: 50%;
+  height: 90%;
+  margin: auto;
+  float: left;
+}
+#div-card-presentation-deuxieme50{
+  width: 50%;
+  height: 90%;
+  margin: auto;
+  float: left;
+
+}
 
 
 </style>
