@@ -1,80 +1,121 @@
 <template>
   <v-app>
-
-
-      <!--Div page complète-->
-      <div class="contenaire">
-        <div class="blockHorizontal">
-
-        <!--Slide 1-->
-        <div class="slide one">
-          <header id="header1">
-            <nav>
-              <ul>
-                <li id="nom-header">
+    <!--Div page complète-->
+    <div class="contenaire">
+      <div class="blockHorizontal">
+        <header>
+          <nav>
+            <ul>
+              <li id="nom-header">
             <span id="lettre-m">
               M
             </span>
-                  <span>
+                <span>
               ARCEL
             </span>
-                  <span id="lettre-e">
+                <span id="lettre-e">
               E
             </span>
 
-                  <span>
+                <span>
               VAN
             </span>
 
-                </li>
-                <li>
-                  <a id="a">
-                    COMPÉTENCES
-                  </a>
-                </li>
-                <li>
-                  <a id="a">
-                    FORMATIONS
-                  </a>
-                </li>
-                <li>
-                  <a id="a">
-                    CURRICULUM VITÆ
-                  </a>
-                </li>
-                <li>
-                  <a id="a">
-                    RÉALISATIONS
-                  </a>
-                </li>
-                <li>
-                  <a id="a">
-                    CONTACT
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </header>
+              </li>
+              <li>
+                <a id="a">
+                  COMPÉTENCES
+                </a>
+              </li>
+              <li>
+                <a id="a"
+                   href="#slide">
+                  FORMATIONS
+                </a>
+              </li>
+              <li>
+                <a id="a">
+                  STAGE
+                </a>
+              </li>
+              <li>
+                <a id="a">
+
+                  RÉALISATIONS
+                </a>
+              </li>
+              <li>
+                <a id="a">
+                  CONTACT
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <!--Slide 1-->
+        <div class="slide one">
+
+
+          <v-btn v-on:click="salut" style="color: white; background:#0e1012 ">
+            On click
+          </v-btn>
+
         </div>
 
         <!--Slide 2-->
         <div class="slide two">
-
+          2
         </div>
 
         <!--Slide 3-->
-        <v-div class="slide three" >
-        3
-        </v-div>
+        <div class="slide three">
+          3
+        </div>
 
         <!--Slide 4-->
         <div class="slide four" tile>
-        4
-        </div>
+          <!--Stage Com & Company -->
+          <v-card width="25%" height="300px" style="border:1px solid black">
+            <v-card-title class="text-center">
+              Com & Company
+            </v-card-title>
+            <v-divider style="margin-top: -15px; width: 75%; margin-left: auto; margin-right: auto"></v-divider>
+            <v-card-text>
+              Stage dans l'entreprise Com & Company. Cette entreprise est une SSII appartenant au groupe valeur et
+              capital
+            </v-card-text>
+            <img
+                :src="imageCEC"
+                style="margin-top: -50px; margin-left: auto; margin-right: auto; padding: 0; display: block">
+            <v-card-actions>
 
+              <v-btn @click="openModalComCompanyVar = true"
+                     outlined
+                     text
+                     style="background-color: #0e1012; color: white; margin-top: -30px">
+
+                Voir plus
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+          <v-dialog v-model="openModalComCompanyVar"
+                    fullscreen
+                    transition="dialog-bottom-transition">
+
+            <v-card height="100vh" width="100vw">
+
+
+              <v-btn @click="openModalComCompanyVar = false">
+                Fermer
+              </v-btn>
+            </v-card>
+
+          </v-dialog>
         </div>
 
       </div>
+
+    </div>
 
   </v-app>
 </template>
@@ -85,9 +126,17 @@
 export default {
   name: 'App',
 
-  data: () => ({}),
+  data: () => ({
+    name: 'Evan',
+    openModalComCompanyVar: false,
+    imageCEC: require('@/img/com-&-company.webp'),
 
-
+  }),
+  methods: {
+    salut: function () {
+      alert("Bonjour" + " " + this.name + " !")
+    },
+  },
 };
 </script>
 
@@ -117,39 +166,41 @@ export default {
 }
 
 
-.slide{
+.slide {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size:100px
+  font-size: 100px;
+  border: #0e1012 1px solid;
 }
 
 .one {
   background: white;
 }
 
-.two{
-  background: aqua;
+.two {
+  background: white;
 }
 
 .three {
-  background: antiquewhite;
+  background: white;
 }
 
-.four{
-  background: beige;
+.four {
+  background: white;
 }
-
-
 
 
 header {
-  background-color: black;
+  background-color: #0e1012;
   width: 100vw;
+  top: 0;
+  left: 0;
   position: fixed;
-  top:0;
+  height: 100px;
+  padding: 0;
 
 
 }
@@ -157,7 +208,6 @@ header {
 nav {
   padding: 0;
   text-align: center;
-
 }
 
 nav li {
@@ -183,30 +233,6 @@ nav li {
   padding-bottom: 15px;
   color: white;
 
-
-}
-
-#div-home {
-  height: 100%;
-  width: 100%;
-  background-color: black;
-
-}
-
-#div-home:hover {
-  animation-duration: 1s;
-  animation-name: transition-oppacite;
-  animation-fill-mode: forwards;
-
-}
-
-@keyframes transition-oppacite {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
 }
 
 
@@ -214,47 +240,7 @@ nav li span {
 
   font-size: 40px;
   color: white;
-  animation-duration: 3s;
-  animation-name: translate-left-nom;
-  animation-iteration-count: 1;
-  animation: forwards;
 }
-
-
-@keyframes translate-left-nom {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-#div-card-presentation-premier50 {
-  width: 50%;
-  height: 90%;
-  margin: auto;
-  float: left;
-}
-
-#div-card-presentation-deuxieme50 {
-  width: 50%;
-  height: 90%;
-  margin: auto;
-  float: left;
-
-}
-
-#nom-header {
-
-
-}
-
-
-.lettre {
-  margin-right: -10px;
-}
-
 
 
 </style>
