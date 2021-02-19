@@ -1,60 +1,51 @@
 
 <template>
   <v-app>
+    <div class="responsive">
+
     <!--Div page complète-->
     <div class="contenaire">
+
       <div class="blockHorizontal">
-        <header>
-          <nav>
-            <ul>
-              <li id="nom-header">
-            <span id="lettre-m">
-              M
-            </span>
-                <span>
-              ARCEL
-            </span>
-                <span id="lettre-e">
-              E
-            </span>
-
-                <span>
-              VAN
-            </span>
-
-              </li>
-              <li>
-                <a id="a">
-                  COMPÉTENCES
-                </a>
-              </li>
-              <li>
-                <a id="a"
-                   href="#slide">
-                  FORMATIONS
-                </a>
-              </li>
-              <li>
-                <a id="a">
-                  STAGE
-                </a>
-              </li>
-              <li>
-                <a id="a">
-
-                  RÉALISATIONS
-                </a>
-              </li>
-              <li>
-                <a id="a">
-                  CONTACT
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </header>
+        <div class="header">
+          <header>
+            <nav>
+              <ul>
+                <li id="nom-header">
+                  <span>
+                    MARCEL Evan
+                  </span>
+                </li>
+                <li>
+                  <a id="a"
+                     href="#two">
+                    COMPÉTENCES
+                  </a>
+                </li>
+                <li>
+                  <a id="a"
+                     href="#three">
+                    RÉALISATIONS
+                  </a>
+                </li>
+                <li>
+                  <a id="a"
+                     href="#four">
+                    STAGE
+                  </a>
+                </li>
+                <li>
+                  <a id="a"
+                     href="#five">
+                    CONTACT
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </header>
+        </div>
         <!--Slide 1-->
-        <div class="slide one">
+        <div id="one" class="slide one">
 
 
           <v-btn v-on:click="salut" style="color: white; background:#0e1012 ">
@@ -64,19 +55,49 @@
         </div>
 
         <!--Slide 2-->
-        <div class="slide two">
-          2
+        <div id="two" class="slide two">
+
+          <div class="web">
+            <h2>
+              Technologies web :
+            </h2>
+            <img :src="imgPhp">
+            <img :src="imageTechnoWeb">
+            <img :src="imageSymfony">
+            <img :src="imageVue">
+          </div>
+          <v-divider style="width: 80%; margin-right: auto; margin-top: 30px; margin-left: auto"></v-divider>
+          <div class="poo">
+            <h2>
+              Client lourd :
+            </h2>
+
+            <img :src="imageCsharp">
+            <img :src="imageJava">
+
+          </div>
+          <v-divider style="width: 80%; margin-right: auto; margin-top: 30px; margin-left: auto"></v-divider>
+          <div class="autre">
+            <h2>
+              Autre :
+            </h2>
+            <img :src="imageGit">
+            <img :src="imageOffice">
+            <img :src="imageSql">
+
+          </div>
+
         </div>
 
         <!--Slide 3-->
-        <div class="slide three">
+        <div id="three" class="slide three">
           3
         </div>
 
         <!--Slide 4-->
-        <div class="slide four" tile>
+        <div id="four" class="slide four" tile>
           <!--Stage Com & Company -->
-          <v-card width="25%" height="300px">
+          <v-card width="25%" height="300px" style="border: #0e1012 2px solid">
             <v-card-title class="text-center">
               Com & Company
             </v-card-title>
@@ -207,7 +228,7 @@
         </div>
       </div>
     </div>
-
+    </div>
   </v-app>
 </template>
 
@@ -227,7 +248,14 @@ export default {
     openModalComCompanyVar: false,
     imageCEC: require('@/img/com-&-company.webp'),
     imageVue: require('@/img/vuejs.png'),
-    imageSymfony: require('@/img/symfony.png')
+    imageSymfony: require('@/img/symfony.png'),
+    imgPhp: require('@/img/new-php-logo.svg'),
+    imageCsharp: require('@/img/logo-csharp.png'),
+    imageJava: require('@/img/logo-java-mieux.jpg'),
+    imageTechnoWeb: require('@/img/html-css.png'),
+    imageGit: require('@/img/logo-github.png'),
+    imageOffice: require('@/img/logo-office.png'),
+    imageSql: require('@/img/logo-sql.png')
 
   }),
   methods: {
@@ -243,8 +271,17 @@ export default {
 
 <style>
 
+
+.header {
+  position: fixed;
+  width: 100vw;
+  top:0;
+  left: 0;
+}
+
+
 .contenaire {
-  width: 100vh;
+  width: 500vh;
   height: 100vw;
   transform: rotate(-90deg) translateX(-100vh);
   transform-origin: top left;
@@ -262,6 +299,7 @@ export default {
   display: flex;
   flex-direction: row;
   width: 400vw;
+  height: 100vh;
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
 }
@@ -270,38 +308,36 @@ export default {
 .slide {
   width: 100vw;
   height: 100vh;
-  display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 100px;
   border: #0e1012 1px solid;
+
 }
 
 .one {
   background: white;
+  display: flex;
 }
 
 .two {
   background: white;
+
 }
 
 .three {
   background: white;
+  display: flex;
 }
 
 .four {
   background: white;
+  display: flex;
 }
 
 
 header {
   background-color: #0e1012;
-  width: 100vw;
-  top: 0;
-  left: 0;
-  position: fixed;
-  height: 100px;
-  padding: 0;
+  padding: 30px;
 
 }
 
@@ -340,6 +376,56 @@ nav li span {
 
   font-size: 40px;
   color: white;
+}
+
+.web {
+  margin-top: 11%;
+  display: flex;
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+}
+
+.web h2 {
+  text-align: center;
+  font-size: 50px;
+  margin: 40px;
+}
+
+.poo {
+  display: flex;
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.poo h2 {
+  text-align: center;
+  font-size: 50px;
+  margin: 40px;
+}
+
+.autre {
+  height: 20%;
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.autre h2 {
+  text-align: center;
+  font-size: 50px;
+  margin: 40px;
+
+}
+
+
+.two img {
+  height: 170px;
+  width: 170px;
+  margin: 40px;
 }
 
 .header-stage{
