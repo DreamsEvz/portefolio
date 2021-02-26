@@ -1,49 +1,46 @@
-
+C:\laragon\www\portefolio\projet\src
 <template>
   <v-app>
-    <div class="responsive">
-
+    <header>
+      <nav>
+        <ul>
+          <li id="nom-header">
+                  <span>
+                    MARCEL Evan
+                  </span>
+          </li>
+          <li>
+            <a id="a"
+               href="#two">
+              COMPÉTENCES
+            </a>
+          </li>
+          <li>
+            <a id="a"
+               href="#three">
+              RÉALISATIONS
+            </a>
+          </li>
+          <li>
+            <a id="a"
+               href="#four">
+              STAGE
+            </a>
+          </li>
+          <li>
+            <a id="a"
+               href="#five">
+              CONTACT
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <!--Div page complète-->
     <div class="contenaire">
 
       <div class="blockHorizontal">
-        <div class="header">
-          <header>
-            <nav>
-              <ul>
-                <li id="nom-header">
-                  <span>
-                    MARCEL Evan
-                  </span>
-                </li>
-                <li>
-                  <a id="a"
-                     href="#two">
-                    COMPÉTENCES
-                  </a>
-                </li>
-                <li>
-                  <a id="a"
-                     href="#three">
-                    RÉALISATIONS
-                  </a>
-                </li>
-                <li>
-                  <a id="a"
-                     href="#four">
-                    STAGE
-                  </a>
-                </li>
-                <li>
-                  <a id="a"
-                     href="#five">
-                    CONTACT
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </header>
-        </div>
+
         <!--Slide 1-->
         <div id="one" class="slide one">
 
@@ -57,27 +54,45 @@
         <!--Slide 2-->
         <div id="two" class="slide two">
 
-          <div class="web">
+          <div class="web text-competence">
             <h2>
               Technologies web :
             </h2>
             <img :src="imgPhp">
+            <span>
+
+            </span>
             <img :src="imageTechnoWeb">
+            <span>
+
+            </span>
             <img :src="imageSymfony">
+            <span>
+
+            </span>
             <img :src="imageVue">
+            <span>
+
+            </span>
           </div>
           <v-divider style="width: 80%; margin-right: auto; margin-top: 30px; margin-left: auto"></v-divider>
-          <div class="poo">
+          <div class="poo text-competence">
             <h2>
               Client lourd :
             </h2>
 
             <img :src="imageCsharp">
+            <span>
+            C#
+            </span>
             <img :src="imageJava">
+            <span>
+
+            </span>
 
           </div>
           <v-divider style="width: 80%; margin-right: auto; margin-top: 30px; margin-left: auto"></v-divider>
-          <div class="autre">
+          <div class="autre text-competence">
             <h2>
               Autre :
             </h2>
@@ -110,7 +125,7 @@
                 :src="imageCEC"
                 style="margin-top: -50px; margin-left: auto; margin-right: auto; padding: 0; display: block">
             <v-card-actions>
-            <v-spacer></v-spacer>
+              <v-spacer></v-spacer>
               <v-btn @click="openModalComCompanyVar = true"
                      outlined
                      text
@@ -128,7 +143,8 @@
             <v-card height="2000px" width="100%">
               <div class="header-stage">
                 <h1 class="text-header-stage">Stage chez Com & Company</h1>
-                <v-btn @click="openModalComCompanyVar = false" style="background-color: white; color: #0e1012; float: right" elevation="0" outlined >
+                <v-btn @click="openModalComCompanyVar = false"
+                       style="background-color: white; color: #0e1012; float: right" elevation="0" outlined>
                   Fermer
                 </v-btn>
               </div>
@@ -224,10 +240,8 @@
           </v-dialog>
 
 
-
         </div>
       </div>
-    </div>
     </div>
   </v-app>
 </template>
@@ -238,8 +252,8 @@
 
 export default {
 
-  icons : {
-    iconfont:'mdiSVG'
+  icons: {
+    iconfont: 'mdiSVG'
   },
   name: 'App',
 
@@ -270,13 +284,19 @@ export default {
 </script>
 
 <style>
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
 
 
-.header {
+}
+
+header {
   position: fixed;
   width: 100vw;
-  top:0;
-  left: 0;
+  background-color: #0e1012;
+  padding: 30px;
+  z-index: 99;
 }
 
 
@@ -288,7 +308,7 @@ export default {
   overflow-x: hidden;
   -ms-overlow-style: none;
   scrollbar-width: none;
-
+  position: relative;
 }
 
 ::-webkit-scrollbar {
@@ -335,12 +355,6 @@ export default {
 }
 
 
-header {
-  background-color: #0e1012;
-  padding: 30px;
-
-}
-
 nav {
   padding: 0;
   text-align: center;
@@ -366,7 +380,7 @@ nav li {
 
 #a:hover {
   border-bottom: white solid 3px;
-  padding-bottom: 15px;
+  padding-bottom: 7px;
   color: white;
 
 }
@@ -386,9 +400,9 @@ nav li span {
   align-items: center;
 }
 
-.web h2 {
+.text-competence h2 {
   text-align: center;
-  font-size: 50px;
+  font-size: 30px;
   margin: 40px;
 }
 
@@ -400,12 +414,6 @@ nav li span {
 }
 
 
-.poo h2 {
-  text-align: center;
-  font-size: 50px;
-  margin: 40px;
-}
-
 .autre {
   height: 20%;
   margin-top: 0px;
@@ -414,28 +422,27 @@ nav li span {
   align-items: center;
 }
 
-.autre h2 {
-  text-align: center;
-  font-size: 50px;
-  margin: 40px;
 
+.text-competence span {
+  display: block;
+  float: bottom;
 }
 
 
 .two img {
-  height: 170px;
-  width: 170px;
+  height: 50px;
+  width: 50px;
   margin: 40px;
 }
 
-.header-stage{
+.header-stage {
   width: 100%;
   height: 100px;
   background-color: #0e1012;
   display: flex;
   text-align: center;
   position: sticky;
-  top:0;
+  top: 0;
 
 
 }
@@ -446,13 +453,13 @@ nav li span {
   font-size: 50px;
 }
 
-.body-stage{
+.body-stage {
   width: 50%;
   margin: auto;
   height: auto;
 }
 
-.block-techno{
+.block-techno {
   height: 300px;
   display: flex;
   justify-content: center;
