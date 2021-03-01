@@ -1,4 +1,3 @@
-C:\laragon\www\portefolio\projet\src
 <template>
   <v-app>
     <header>
@@ -56,13 +55,17 @@ C:\laragon\www\portefolio\projet\src
 
           <div class="web text-competence">
             <h2>
-              Technologies web :
-            </h2>
-            <img :src="imgPhp">
-            <span>
 
-            </span>
-            <img :src="imageTechnoWeb">
+            </h2>
+            Technologies web :
+            <v-icon
+                x-large
+                color="blue-grey darken-2"
+            >mdi-language-php</v-icon>
+
+            <v-icon x-large>
+            mdi-symfony
+            </v-icon>
             <span>
 
             </span>
@@ -90,6 +93,7 @@ C:\laragon\www\portefolio\projet\src
 
             </span>
 
+
           </div>
           <v-divider style="width: 80%; margin-right: auto; margin-top: 30px; margin-left: auto"></v-divider>
           <div class="autre text-competence">
@@ -106,7 +110,7 @@ C:\laragon\www\portefolio\projet\src
 
         <!--Slide 3-->
         <div id="three" class="slide three">
-          3
+          REALISATIONS
         </div>
 
         <!--Slide 4-->
@@ -234,6 +238,7 @@ C:\laragon\www\portefolio\projet\src
                   suis désormais capable de bien le comprendre.
                 </p>
 
+
               </div>
             </v-card>
 
@@ -247,15 +252,17 @@ C:\laragon\www\portefolio\projet\src
 </template>
 
 
+
+
 <script>
-
-
+import { mdiLanguagePhp } from '@mdi/js';
 export default {
 
-  icons: {
-    iconfont: 'mdiSVG'
-  },
   name: 'App',
+
+
+
+
 
   data: () => ({
     name: 'Evan',
@@ -269,7 +276,8 @@ export default {
     imageTechnoWeb: require('@/img/html-css.png'),
     imageGit: require('@/img/logo-github.png'),
     imageOffice: require('@/img/logo-office.png'),
-    imageSql: require('@/img/logo-sql.png')
+    imageSql: require('@/img/logo-sql.png'),
+    pathPhp: mdiLanguagePhp,
 
   }),
   methods: {
