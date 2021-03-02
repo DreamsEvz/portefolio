@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <div class="body">
     <header>
       <nav>
         <ul>
@@ -29,9 +30,13 @@
           <li>
             <a id="a"
                href="#five">
-              CONTACT
+              VEILLE TECHNOLOGIQUE
             </a>
           </li>
+          <li>
+            <a id="a" href="#six"></a>
+          </li>
+
         </ul>
       </nav>
     </header>
@@ -42,11 +47,9 @@
 
         <!--Slide 1-->
         <div id="one" class="slide one">
-
-
-          <v-btn v-on:click="salut" style="color: white; background:#0e1012 ">
-            On click
-          </v-btn>
+          <h1>
+            Jeune étudiant actuellement en BTS SIO option SLAM
+          </h1>
 
         </div>
 
@@ -58,14 +61,9 @@
 
             </h2>
             Technologies web :
-            <v-icon
-                x-large
-                color="blue-grey darken-2"
-            >mdi-language-php</v-icon>
+            <v-icon class="icon">mdi-language-php</v-icon>
 
-            <v-icon x-large>
-            mdi-symfony
-            </v-icon>
+            <v-icon class="icon">mdi-symfony</v-icon>
             <span>
 
             </span>
@@ -116,7 +114,7 @@
         <!--Slide 4-->
         <div id="four" class="slide four" tile>
           <!--Stage Com & Company -->
-          <v-card width="25%" height="300px" style="border: #0e1012 2px solid">
+          <v-card width="25%" height="300px" style="border: #0e1012 2px solid; border-radius: 10px; box-shadow: 10px 10px 10px grey">
             <v-card-title class="text-center">
               Com & Company
             </v-card-title>
@@ -246,7 +244,13 @@
 
 
         </div>
+
+        <!--Slide 5 -->
+        <div id="five" class="slide five">
+
+        </div>
       </div>
+    </div>
     </div>
   </v-app>
 </template>
@@ -326,7 +330,7 @@ header {
 .blockHorizontal {
   display: flex;
   flex-direction: row;
-  width: 400vw;
+  width: 500vw;
   height: 100vh;
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
@@ -362,7 +366,6 @@ header {
   display: flex;
 }
 
-
 nav {
   padding: 0;
   text-align: center;
@@ -373,7 +376,6 @@ nav li {
   list-style: none;
   font-size: 15px;
   padding: 30px;
-
 }
 
 /* Les id "a" correspondent à plusieurs élément car le code css ci-dessous ne fonctionne pas en appelant l'élément ou en utilisant une class */
@@ -392,7 +394,6 @@ nav li {
   color: white;
 
 }
-
 
 nav li span {
 
@@ -421,7 +422,6 @@ nav li span {
   align-items: center;
 }
 
-
 .autre {
   height: 20%;
   margin-top: 0px;
@@ -430,12 +430,10 @@ nav li span {
   align-items: center;
 }
 
-
 .text-competence span {
   display: block;
   float: bottom;
 }
-
 
 .two img {
   height: 50px;
@@ -451,8 +449,6 @@ nav li span {
   text-align: center;
   position: sticky;
   top: 0;
-
-
 }
 
 .text-header-stage {
@@ -492,5 +488,14 @@ p {
 
 .sous-sous-titre {
   margin-top: 30px;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .body {
+    display: none;
+
+  }
 }
 </style>
