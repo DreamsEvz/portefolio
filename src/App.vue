@@ -48,7 +48,11 @@
         <!--Slide 1-->
         <div id="one" class="slide one">
           <h1>
-            Jeune étudiant actuellement en BTS SIO option SLAM
+            Jeune étudiant de 19 ans actuellement en BTS SIO option SLAM
+          </h1>
+          <br>
+          <h1>
+
           </h1>
 
         </div>
@@ -152,25 +156,41 @@
               </div>
               <div class="body-stage">
                 <h2 class="sous-titre">
-                  I - Le groupe :
+                  Le groupe
                 </h2>
-                <h3 class="sous-sous-titre">
-                  1.1 - Valeur et Capital
-                </h3>
+                <h2 class="sous-sous-titre">
+                  Valeur et Capital
+                </h2>
                 <p>
-                  Le groupe Valeur et capital est un vaste groupe du domaine de
+                  Le groupe Valeur et capital est un vaste groupe du <b>domaine de l'immobilier</b>.
+                  <br>
+                  <br>
+                  Le groupe possède de nombreuses entreprise, c'est dans celle <b> chargé de la communication et de la création
+                  numérique que j'ai effectué mon stage </b>.
+
+                  <!--Le groupe Valeur et capital est un vaste groupe du domaine de
                   l’immobilier, allant de la location de résidence étudiante à la vente de bien en
                   passant par le conseil en placement financier, ce groupe regroupe de
                   nombreux domaines d’activités ainsi que de nombreux corps de métiers. C’est
                   dans cette démarche qu’il fallut mettre en place une entreprise tierce chargée
                   de s’occuper de la partie numérique de ces différentes entités. C’est alors que
-                  Com & Company fut créé.
+                  Com & Company fut créé.-->
+
+
                 </p>
-                <h3 class="sous-sous-titre">
-                  1.2 - Com & Company
-                </h3>
+                <a href="https://www.valeur-et-capital.com/" target="_blank">
+                <img :src="imageValeurEtCapital" style="display: block; margin-left :auto; margin-right: auto; margin-top: 10px">
+                </a>
+                <br>
                 <p>
-                  L’entreprise Com & Company s’occupe de la communication du groupe
+                  J'ai effectuer ce stage au siège du groupe se trouvant à <b>la cité internationnale</b> c'est là bas que j'ai effectué mon stage.
+                </p>
+                <img :src="imageCite" style="width: auto; height: 200px; margin: auto; display: block;">
+                <h2 class="sous-sous-titre">
+                  Com & Company
+                </h2>
+                <p>
+                  <!--L’entreprise Com & Company s’occupe de la communication du groupe
                   mais est aussi chargée de créer les différents sites web et autres applications
                   dont nécessitent les nombreuses entités du groupe. La clientèle de Com &
                   Company est donc essentiellement le groupe Valeur et capital. Une nouvelle
@@ -185,12 +205,12 @@
                   Parmi les fonctions principales de Com & Company on retrouve donc la
                   conception et la mise en place de diverses applications comme énoncé plus
                   tôt mais ils assurent aussi bien entendu la maintenance et les mises à jour de
-                  leurs applications.
+                  leurs applications.-->
                 </p>
                 <v-divider style="margin-top: 30px">
                 </v-divider>
                 <h2 class="sous-titre">
-                  II - Les technologies utilisés :
+                   Les technologies utilisés
                 </h2>
                 <div class="block-techno">
                   <div class="div-image-techno">
@@ -203,25 +223,27 @@
                 </div>
                 <v-divider style="margin-top: 30px"></v-divider>
                 <h2 class="sous-titre">
-                  III - Ma mission :
+                  Ma mission
                 </h2>
                 <h3 class="sous-sous-titre">
-                  3.1 - Contexte de la mission
+                  Contexte de la mission
                 </h3>
                 <p>
-                  Parmi les différents projets de l’entreprise j’ai été assigné à un site de
+                  <!--Parmi les différents projets de l’entreprise j’ai été assigné à un site de
                   signature à distance, en effet à cause du confinement les signatures de
                   documents en présentiel n’étaient plus possible c’est pour répondre à cette
                   problématique que le site « Sign » a dû être mis en place. Cette plateforme
                   permet donc d’accéder aux différentes entités de l’entreprise et de pouvoir
-                  émettre des signatures facilement et ergonomiquement.
+                  émettre des signatures facilement et ergonomiquement.-->
                 </p>
 
                 <h3 class="sous-sous-titre">
-                  3.2 - Le cœur de la mission
+                  Le cœur de la mission
                 </h3>
                 <p>
-                  Ma mission à été en partant du site Sign de créer de nouvelles
+
+
+                  <!--Ma mission à été en partant du site Sign de créer de nouvelles
                   fonctionnalités utiles à l’administration des utilisateurs.
                   Le projet est développé en PHP avec le Framework Symfony pour le back
                   mais aussi avec un Framework javascript pour le front, nommé vuejs.
@@ -233,7 +255,7 @@
                   compréhension du Symfony a été compliqué, n’ayant jamais fait de PHP objet
                   j’ai au début été vraiment pris au dépourvut, mais après beaucoup de
                   persévérance j’ai appris à être de plus en plus à l’aise avec ce Framework et je
-                  suis désormais capable de bien le comprendre.
+                  suis désormais capable de bien le comprendre. -->
                 </p>
 
 
@@ -281,6 +303,8 @@ export default {
     imageGit: require('@/img/logo-github.png'),
     imageOffice: require('@/img/logo-office.png'),
     imageSql: require('@/img/logo-sql.png'),
+    imageValeurEtCapital: require('@/img/valeurEtCapital.jpg'),
+    imageCite: require('@/img/cite.jpg'),
     pathPhp: mdiLanguagePhp,
 
   }),
